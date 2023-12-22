@@ -12,9 +12,8 @@
         state: started
         enabled: yes
     - name: Recursively remove default content
-      ansible.builtin.file:
-      path: /usr/share/nginx/html/*
-      state: absent   
+      ansible.builtin.shell:
+        cmd: rm -rf /usr/share/nginx/html/* 
     - name: download web application
       ansible.builtin.get_url:
         url: https://roboshop-builds.s3.amazonaws.com/web.zip
