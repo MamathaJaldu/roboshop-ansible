@@ -30,7 +30,7 @@
         chdir: /app
     - name: copy catalogue service
       ansible.builtin.copy:
-        src: catalogue.service
+        src: /catalogue.service
         dest: /etc/systemd/system/catalogue.service
         remote_src: yes 
     - name: Just force systemd to reread configs
