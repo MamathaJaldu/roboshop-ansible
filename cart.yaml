@@ -10,7 +10,7 @@
         name: nodejs
         state: present
 
-    - namw: create user
+    - name: create user
       ansible.builtin.user:
         name: roboshop
 
